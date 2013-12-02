@@ -12,7 +12,7 @@ https://developers.google.com/appengine/downloads#Google_App_Engine_SDK_for_Go
 
 Links
 =====
-* http://www.securityfocus.com/archive/107/528120/30/0/threaded">security bulletin
+* http://www.securityfocus.com/archive/107/528120/30/0/threaded
 
 * http://hustoknow.blogspot.com/2013/11/samsung-dvr-security-vulnerability.html
 
