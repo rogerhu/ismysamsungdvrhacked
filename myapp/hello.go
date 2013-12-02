@@ -52,11 +52,15 @@ func check(w http.ResponseWriter, r *http.Request) {
 			fmt.Fprintf(w, "Could not reach Samsung's IPolis site %s", err)
 			return
 		}
+
 		body, err := ioutil.ReadAll(resp.Body)
 		refresh := checkBody(string(body))
 
-		if len(refresh) > 1 {
-			//fmt.Fprintf(w, "Response %s", refresh[1])
+		if len(refresh) <= 1 {
+			fmt.Fprintf(w, "No valid IPolis account found for this productID")
+			return
+		} else {
+		//fmt.Fprintf(w, "Response %s", refresh[1])
 
 			host, port, err := net.SplitHostPort(refresh[1])
 
